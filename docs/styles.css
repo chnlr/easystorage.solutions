@@ -9,6 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
+    overflow: hidden; /* Prevents scrolling when the banner appears */
 }
 #doorImage {
     max-width: 100%; /* Ensures the image is responsive and centers properly */
@@ -25,12 +26,8 @@ body {
 }
 #companyName {
     font-family: 'Bebas Neue', sans-serif;
-}
-#companyName {
-    font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 10px; /* Reduces the space below the company name */
 }
-
 #comingSoon {
     font-size: 24px; /* Smaller font for 'coming soon' */
     font-family: 'Playfair Display', serif;
@@ -38,3 +35,23 @@ body {
     margin-top: 0px; /* Reduces the space above 'coming soon' */
 }
 
+/* Banner styling */
+.banner {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: -50px; /* Initially hidden above the viewport */
+    left: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 1.3s ease-in-out; /* Smooth slide down */
+}
+
+.banner-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Bebas Neue', sans-serif;
+}
