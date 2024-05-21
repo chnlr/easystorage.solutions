@@ -41,12 +41,12 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px; /* Added gap for spacing */
 }
 
 .about-section {
     flex: 1;
     max-width: 600px; /* Adjust the max-width to make the section narrower */
-    margin-right: 20px;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -78,22 +78,21 @@ footer {
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch; /* Ensures full width */
     }
 
     .about-section {
         max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Space below the about section */
     }
 
     .location-aside {
-        flex: 0 0 auto;
-        width: 100%;
+        width: 100%; /* Full width for the aside */
+        flex: none; /* Disable flex properties */
     }
 
     .location-image {
-        width: 100%;
+        width: 100%; /* Ensure image takes full width */
         height: auto;
     }
 }
