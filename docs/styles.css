@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+#companyName {
+    font-size: 48px;
+    opacity: 1; /* Start fully visible */
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: none; /* No transition needed here since it starts visible */
+}
+#comingSoon {
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden; /* Initially hidden but space reserved */
+    transition: opacity 2s ease-in, visibility 0s 2s; /* Delay visibility change to match opacity */
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#doorImage {
+    width: 600px;
+    height: auto;
+    cursor: pointer;
+}
