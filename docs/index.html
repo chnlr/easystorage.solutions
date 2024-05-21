@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Door Animation</title>
+    <title>Easy Storage Solutions</title>
 </head>
 <body>
     <img id="doorImage" src="door.png" alt="Storage Door" style="width: 200px; height: auto; cursor: pointer;">
 
     <script>
+        // Preload the GIF
+        var gifPreload = new Image();
+        gifPreload.src = 'opendoor.gif';
+
         document.getElementById('doorImage').addEventListener('click', function() {
             var door = document.getElementById('doorImage');
-            door.src = 'opendoor.gif'; // Change to the GIF
+            
+            // Ensure the GIF is loaded
+            gifPreload.onload = function() {
+                door.src = gifPreload.src; // Change the source to the GIF after it's fully loaded
 
-            door.onload = function() {
+                // Calculate duration based on the GIF - assume 3000 milliseconds or retrieve from metadata if possible
                 setTimeout(function() {
-                    door.style.display = 'none'; // Hide the image after the GIF plays
-                }, 3000); // Adjust based on actual GIF duration
+                    door.style.display = 'none'; // Hide the image after the GIF has played
+                }, 1000); // This time should be adjusted to match the actual duration of the GIF
             };
+
+            if(gifPreload.complete) { // If the image is already loaded into cache
+                door.src = gifPreload.src; // Immediately change the source
+                setTimeout(function() {
+                    door.style.display = 'none'; // Hide the image after the GIF has played
+                }, 1000);
+            }
         });
     </script>
 </body>
 </html>
-
