@@ -17,6 +17,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; /* Make positioning relative for centering */
 }
 
 header h1 {
@@ -24,6 +25,9 @@ header h1 {
     font-size: 24px; /* Adjust size as needed */
     margin: 0;
     color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .home-link {
