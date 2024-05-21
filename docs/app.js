@@ -1,36 +1,28 @@
-var gifPreload = new Image();
-gifPreload.src = 'opendoor.gif';
+document.addEventListener('DOMContentLoaded', function() {
+    const doorImage = document.getElementById('doorImage');
+    const companyName = document.getElementById('companyName');
+    const comingSoon = document.getElementById('comingSoon');
+    const gifPreload = new Image();
+    gifPreload.src = 'opendoor.gif';
 
-document.getElementById('doorImage').addEventListener('click', function() {
-    var door = document.getElementById('doorImage');
-    door.src = gifPreload.src;
+    doorImage.addEventListener('click', function() {
+        if (!gifPreload.complete) { // Checks if the GIF is not yet loaded
+            gifPreload.onload = showText; // Binds function to onload if GIF hasn't loaded
+        } else {
+            showText(); // Executes immediately if GIF is already loaded
+        }
+        doorImage.src = gifPreload.src; // Starts playing the GIF
+    });
 
-    gifPreload.onload = function() {
+    function showText() {
         setTimeout(function() {
-            door.style.display = 'none'; // Optionally hide the door image
-            var companyName = document.getElementById('companyName');
-            companyName.style.visibility = 'visible'; // Make the company name visible
-            companyName.style.opacity = 1; // Start the fade-in effect for company name
-            setTimeout(function() {
-                var comingSoon = document.getElementById('comingSoon');
-                comingSoon.style.visibility = 'visible'; // Make the 'coming soon' text visible
-                comingSoon.style.opacity = 1; // Start the fade-in effect for 'coming soon'
-            }, 2000); // Delay for 'coming soon' to start fading in after 'Easy Storage Solutions' appears
-        }, 1000); // Adjust this time to match the duration of your GIF
-    };
-
-    if (gifPreload.complete) {
-        door.src = gifPreload.src;
-        setTimeout(function() {
-            door.style.display = 'none';
-            var companyName = document.getElementById('companyName');
+            doorImage.style.display = 'none'; // Hide the GIF after playing
             companyName.style.visibility = 'visible';
-            companyName.style.opacity = 1;
+            companyName.style.opacity = 1; // Fade in the company name immediately after GIF
             setTimeout(function() {
-                var comingSoon = document.getElementById('comingSoon');
                 comingSoon.style.visibility = 'visible';
-                comingSoon.style.opacity = 1;
-            }, 2000);
-        }, 1000);
+                comingSoon.style.opacity = 1; // Fade in 'coming soon' shortly after
+            }, 200); // Minimal delay for 'coming soon' to appear after company name
+        }, 1000); // Assumed GIF duration before text appears
     }
 });
