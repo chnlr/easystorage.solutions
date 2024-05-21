@@ -5,65 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Storage Solutions</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-            font-family: 'Bebas Neue', sans-serif;
-        }
-        #companyName {
-            display: none;
-            font-size: 48px; /* Adjust size as necessary */
-            opacity: 0;
-            transition: opacity 2s ease-in; /* Smooth transition for the opacity */
-            text-align: center; /* Center the text */
-        }
-        #doorImage {
-            width: 600px; /* Adjust size as necessary */
-            height: auto;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <img id="doorImage" src="door.png" alt="Storage Door">
-    <div id="companyName">
-        Easy Storage<br>
-        Solutions
-    </div>
-
-    <script>
-        var gifPreload = new Image();
-        gifPreload.src = 'opendoor.gif';
-
-        document.getElementById('doorImage').addEventListener('click', function() {
-            var door = document.getElementById('doorImage');
-            door.src = gifPreload.src;
-
-            gifPreload.onload = function() {
-                setTimeout(function() {
-                    door.style.display = 'none'; // Optionally hide the door image
-                    document.getElementById('companyName').style.display = 'block'; // Show the text
-                    document.getElementById('companyName').style.opacity = 1; // Start the fade-in effect
-                }, 1000); // Adjust this time to match the duration of your GIF
-            };
-
-            if (gifPreload.complete) {
-                door.src = gifPreload.src;
-                setTimeout(function() {
-                    door.style.display = 'none'; // Optionally hide the door image
-                    document.getElementById('companyName').style.display = 'block'; // Show the text
-                    document.getElementById('companyName').style.opacity = 1; // Start the fade-in effect
-                }, 1000);
-            }
-        });
-    </script>
+    <div id="companyName">Easy Storage<br>Solutions</div>
+    <div id="comingSoon">coming soon</div>
+    <script src="app.js"></script>
 </body>
 </html>
