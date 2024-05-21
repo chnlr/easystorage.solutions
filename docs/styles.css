@@ -10,20 +10,20 @@ body {
     margin: 0;
     background-color: #f5f5f5;
 }
-#companyName {
-    font-size: 48px;
-    opacity: 1; /* Start fully visible */
-    text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    transition: none; /* No transition needed here since it starts visible */
-}
-#comingSoon {
-    font-size: 24px;
+#companyName, #comingSoon {
+    font-size: 48px; /* Adjust the font size for 'companyName' as necessary */
     opacity: 0;
     visibility: hidden; /* Initially hidden but space reserved */
-    transition: opacity 2s ease-in, visibility 0s 2s; /* Delay visibility change to match opacity */
     text-align: center;
+    transition: opacity 2s ease-in, visibility 0s 2s; /* Apply to both elements */
+}
+#companyName {
+    font-family: 'Bebas Neue', sans-serif;
+}
+#comingSoon {
+    font-size: 24px; /* Smaller font for 'coming soon' */
     font-family: 'Playfair Display', serif;
+    transition-delay: 2s; /* Delay only the transition of 'coming soon' */
 }
 #doorImage {
     width: 600px;
