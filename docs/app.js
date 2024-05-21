@@ -4,19 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const comingSoon = document.getElementById('comingSoon');
     const banner = document.getElementById('banner');
     const gifPreload = new Image();
-    gifPreload.src = 'doorfall.gif';
+    gifPreload.src = 'opendoor.gif';
 
     doorImage.addEventListener('click', function() {
-        if (!gifPreload.complete) { // Checks if the GIF is not yet loaded
-            gifPreload.onload = showText; // Binds function to onload if GIF hasn't loaded
-        } else {
-            showText(); // Executes immediately if GIF is already loaded
-        }
-        doorImage.src = gifPreload.src; // Starts playing the GIF
-    });
+        doorImage.src = gifPreload.src;
 
-    function showText() {
-        setTimeout(function() {
+        function showText() {
             doorImage.style.display = 'none'; // Hide the GIF after playing
             companyName.style.visibility = 'visible';
             companyName.style.opacity = 1; // Fade in the company name immediately after GIF
@@ -24,9 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 comingSoon.style.visibility = 'visible';
                 comingSoon.style.opacity = 1; // Fade in 'coming soon' shortly after
                 setTimeout(function() {
-                    banner.style.top = '0'; // Slide down the banner
-                }, 1600); // Delay for banner to appear after 'coming soon'
+                    banner.style.visibility = 'visible';
+                    banner.style.opacity = 1; // Fade in the banner after 'coming soon'
+                }, 800); // Delay for banner to appear after 'coming soon'
             }, 200); // Minimal delay for 'coming soon' to appear after company name
-        }, 800); // Assumed GIF duration before text appears
-    }
+        }
+
+        gifPreload.onload = showText;
+        if (gifPreload.complete) {
+            showText();
+        }
+    });
 });
