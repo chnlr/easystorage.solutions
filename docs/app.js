@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const companyName = document.getElementById('companyName');
     const comingSoon = document.getElementById('comingSoon');
     const gifPreload = new Image();
-    gifPreload.src = 'opendoor.gif';
+    gifPreload.src = 'doorfall.gif';
 
     doorImage.addEventListener('click', function() {
         if (!gifPreload.complete) { // Checks if the GIF is not yet loaded
