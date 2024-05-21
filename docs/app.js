@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 comingSoon.style.visibility = 'visible';
                 comingSoon.style.opacity = 1; // Fade in 'coming soon' shortly after
             }, 200); // Minimal delay for 'coming soon' to appear after company name
-        }, 1000); // Assumed GIF duration before text appears
+        }, 800); // Assumed GIF duration before text appears
     }
 });
