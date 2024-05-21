@@ -6,17 +6,17 @@
     <title>Interactive Door Animation</title>
 </head>
 <body>
-    <img id="doorImage" src="https://easystorage.solutions/door.png" alt="Storage Door" style="width: 200px; height: auto; cursor: pointer;">
+    <img id="doorImage" src="https://chnlr.github.io/easystorage/docs/door.png" alt="Storage Door" style="width: 200px; height: auto; cursor: pointer;">
 
     <script>
         document.getElementById('doorImage').addEventListener('click', function() {
             var door = document.getElementById('doorImage');
-            door.src = 'https://easystorage.solutions/opendoor.gif'; // Change to the GIF
-            
+            door.src = 'https://chnlr.github.io/easystorage/docs/opendoor.gif'; // Change to the GIF
+
             door.onload = function() {
                 setTimeout(function() {
                     door.style.display = 'none'; // Hide the image after the GIF plays
-                }, (door.duration * 1000) || 3000); // Assuming GIF duration or defaulting to 3 seconds
+                }, 3000); // Adjust based on actual GIF duration
             };
         });
     </script>
