@@ -9,14 +9,15 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
-    overflow: hidden; /* Prevents scrolling when the banner appears */
 }
+
 #doorImage {
     max-width: 100%; /* Ensures the image is responsive and centers properly */
     height: auto;
     cursor: pointer;
     margin-top: 150px; /* Adjust this value to move the door image further down */
 }
+
 #companyName, #comingSoon {
     font-size: 48px; /* Uniform size for company name */
     opacity: 0;
@@ -24,10 +25,12 @@ body {
     text-align: center;
     transition: opacity 1s ease-in, visibility 0s 0.2s; /* Smooth transitions */
 }
+
 #companyName {
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 10px; /* Reduces the space below the company name */
 }
+
 #comingSoon {
     font-size: 24px; /* Smaller font for 'coming soon' */
     font-family: 'Playfair Display', serif;
@@ -35,23 +38,10 @@ body {
     margin-top: 0px; /* Reduces the space above 'coming soon' */
 }
 
-/* Banner styling */
-.banner {
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    top: -50px; /* Initially hidden above the viewport */
-    left: 0;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: top 1.3s ease-in-out; /* Smooth slide down */
-}
-
-.banner-link {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-family: 'Bebas Neue', sans-serif;
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    #doorImage {
+        width: 80%; /* Increase the width to make the image larger on mobile devices */
+        margin-top: 50px; /* Adjust margin to fit the image properly */
+    }
 }
