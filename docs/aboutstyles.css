@@ -1,30 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
+    padding: 0;
+    background-color: #fff; /* Neutral white background */
     color: #333;
 }
 
-header {
-    background-color: #007BFF;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
+header nav {
+    background-color: #000; /* Black header */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-section {
-    margin: 20px;
+header h1 {
+    font-family: 'Bebas Neue';
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0;
+    color: #fff;
+}
+
+.home-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+main {
     padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-section {
+    flex: 1;
+    max-width: 600px; /* Adjust the max-width to make the section narrower */
+    margin-right: 20px;
     background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.location-aside {
+    flex: 0 0 300px; /* Fixed width for the aside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-image {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
     padding: 10px;
     font-size: 0.9em;
     color: #666;
