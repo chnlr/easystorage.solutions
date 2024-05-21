@@ -1,10 +1,12 @@
+---
+permalink: /aboutus/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Easy Storage Solutions</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="aboutstyles.css"> <!-- Link to the stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -12,7 +14,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="home-link">Home</a>
+            <a href="/" class="home-link">Home</a>
         </nav>
     </header>
     <main>
