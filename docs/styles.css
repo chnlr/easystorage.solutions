@@ -2,97 +2,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #fff; /* Neutral white background */
-    color: #333;
-}
-
-header nav {
-    background-color: #000; /* Black header */
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header h1 {
-    font-family: 'Bebas Neue';
-    font-size: 24px; /* Adjust size as needed */
-    margin: 0;
-    color: #fff;
-}
-
-.home-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-main {
-    padding: 20px;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px; /* Added gap for spacing */
-}
-
-.about-section {
-    flex: 1;
-    max-width: 600px; /* Adjust the max-width to make the section narrower */
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 20px;
-}
-
-.location-aside {
-    flex: 0 0 300px; /* Fixed width for the aside */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
 }
-
-.location-image {
-    max-width: 100%;
+#doorImage {
+    max-width: 100%; /* Ensures the image is responsive and centers properly */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin-top: 150px; /* Adjust this value to move the door image further down */
 }
-
-footer {
+#companyName, #comingSoon {
+    font-size: 48px; /* Uniform size for company name */
+    opacity: 0;
+    visibility: hidden;
     text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    color: #666;
+    transition: opacity 1s ease-in, visibility 0s 0.2s; /* Smooth transitions */
+}
+#companyName {
+    font-family: 'Bebas Neue', sans-serif;
+}
+#companyName {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 10px; /* Reduces the space below the company name */
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        align-items: stretch; /* Ensures full width */
-    }
-
-    .about-section {
-        max-width: 100%;
-        margin-bottom: 20px; /* Space below the about section */
-    }
-
-    .location-aside {
-        width: 100%; /* Full width for the aside */
-        flex: none; /* Disable flex properties */
-    }
-
-    .location-image {
-        width: 100%; /* Ensure image takes full width */
-        height: auto;
-    }
+#comingSoon {
+    font-size: 24px; /* Smaller font for 'coming soon' */
+    font-family: 'Playfair Display', serif;
+    transition-delay: 1s; /* Immediate transition once it starts */
+    margin-top: 0px; /* Reduces the space above 'coming soon' */
 }
+
