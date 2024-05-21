@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Storage Solutions</title>
-    <style>
-        body {
-            background-color: #f5f5f5; /* Nice white background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
+    <title>Interactive Door Animation</title>
 </head>
 <body>
-    <!-- Content of the body would go here -->
+    <img id="doorImage" src="https://easystorage.solutions/door.png" alt="Storage Door" style="width: 200px; height: auto; cursor: pointer;">
+
+    <script>
+        document.getElementById('doorImage').addEventListener('click', function() {
+            var door = document.getElementById('doorImage');
+            door.src = 'https://easystorage.solutions/opendoor.gif'; // Change to the GIF
+            
+            door.onload = function() {
+                setTimeout(function() {
+                    door.style.display = 'none'; // Hide the image after the GIF plays
+                }, (door.duration * 1000) || 3000); // Assuming GIF duration or defaulting to 3 seconds
+            };
+        });
+    </script>
 </body>
 </html>
