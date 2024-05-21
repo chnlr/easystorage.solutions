@@ -54,17 +54,18 @@ main {
 }
 
 .location-aside {
-    flex: 0 0 300px; /* Fixed width for the aside */
+    flex: 0 0 400px; /* Adjusted width for the aside */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.location-image {
-    max-width: 100%;
-    height: auto;
+.location-aside iframe {
+    width: 100%; /* Ensure iframe takes full width */
+    height: 300px; /* Adjusted height for the iframe */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 0;
 }
 
 footer {
@@ -91,9 +92,8 @@ footer {
         flex: none; /* Disable flex properties */
     }
 
-    .location-image {
-        width: 100%; /* Ensure image takes full width */
-        height: auto;
+    .location-aside iframe {
+        width: 100%; /* Ensure iframe takes full width */
+        height: 200px; /* Set a fixed height for mobile */
     }
 }
-
