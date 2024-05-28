@@ -67,3 +67,12 @@ body {
         margin-top: 50px; /* Adjust margin to fit the image properly */
     }
 }
+
+#doorVideo {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-top: 150px; /* Adjust as needed to match the positioning of the original image */
+    display: none; /* Initially hidden */
+}
+
